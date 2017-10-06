@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Teste</title>
+  <style media="screen">
+
+  /* NOTE: Reset and general settings
+  -------------------------------------------------- */
+  * {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+  }
+  body, html {
+    height: 100%;   /* NOTE: Fix Vertical Align */
+  }
+
+  /* NOTE: Strutcture
+  -------------------------------------------------- */
+  .wrap {
+    max-width: 900px;
+    margin: 0px auto;
+    position: relative;
+    height: 100%;
+
+  }
+  .wrap * {
+    outline: solid 1px #FF0000;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+  }
+  .col {
+    width: 100%;
+  }
+
+  /* NOTE: Header
+  -------------------------------------------------- */
+  header {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .header {
+    height: 95%;
+  }
+  header h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* NOTE: Navigation menu
+  -------------------------------------------------- */
+  nav {
+    width: 100%;
+    background: #FFF;
+  }
+  nav #navicon {
+    display: none;
+  }
+
+  nav a {
+    display: block;
+    height: 34px;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  /* NOTE: Content
+  -------------------------------------------------- */
+
+  /* NOTE: Footer
+  -------------------------------------------------- */
+  footer {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* NOTE: Headigns
+  -------------------------------------------------- */
+  p {
+    padding: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  /* NOTE: Responsive Mode
+  -------------------------------------------------- */
+  @media screen and (max-width: 414px) {
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 50px;
+    }
+    nav #navicon {
+      display: block;
+      height: 38px;
+      width: 38px;
+    }
+    .header {
+      margin-top: 50px;
+      height: 50%;
+    }
+    .content .row {
+      flex-direction: column;
+    }
+  }
+}
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="row header">
+      <header>
+        <h1>Header</h1>
+      </header>
+    </div><!-- NOTE: /header -->
+
+    <div class="nav">
+      <nav>
+        <a href="#" id="navicon"></a><!-- NOTE: Mobile Button -->
+        <ul class="row">
+          <li class="col"><a href="#">item 1</a></li>
+          <li class="col"><a href="#">item 2</a></li>
+          <li class="col"><a href="#">item 3</a></li>
+          <li class="col"><a href="#">item 4</a></li>
+        </ul>
+      </nav>
+    </div><!-- NOTE: /nav -->
+
+    <div class="content">
+      <div class="row">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </div><!-- NOTE: /content -->
+
+
+    <div class="row footer">
+      <footer>
+        <p>
+          Footer
+        </p>
+      </footer>
+    </div><!-- NOTE: /footer -->
+
+  </div><!-- NOTE: /wrap -->
+
+</body>
+</html>
