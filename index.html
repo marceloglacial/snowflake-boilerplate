@@ -1,182 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+
 <head>
-  <meta charset="utf-8">
-  <title>Teste</title>
-  <style media="screen">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="~~~~ DESCRIPTION ~~~~" />
+    <meta name="keywords" content="~~~~ KEYWORDS ~~~~" />
 
-  /* NOTE: Reset and general settings
-  -------------------------------------------------- */
-  * {
-    margin: 0;
-    padding: 0;
+    <!-- ICONS -->
+    <meta property="og:title" content="~~~~ TITLE ~~~~" />
+    <meta property="og:description" content="~~~~ DESCRIPTION ~~~~" />
+    <meta property="og:image" content="tile-wide.png" />
+    <link rel="apple-touch-icon" href="tile.png">
 
-    list-style: none;
 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    box-sizing:         border-box;
-  }
-  body, html {
-    height: 100%;   /* NOTE: Fix Vertical Align */
-  }
+    <title>~~~~ TITLE ~~~~</title>
 
-  /* NOTE: Strutcture
-  -------------------------------------------------- */
-  .wrap {
-    max-width: 900px;
-    margin: 0px auto;
-    position: relative;
-    height: 100%;
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    
+    <!-- STYLES -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/master.css">
 
-  }
-  .wrap * {
-    outline: solid 1px #FF0000;
-  }
-  .row {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    width: 100%;
-  }
-  .col {
-    width: 100%;
-  }
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-  /* NOTE: Header
-  -------------------------------------------------- */
-  header {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-  }
-  .header {
-    height: 95%;
-  }
-  header h1 {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  /* NOTE: Navigation menu
-  -------------------------------------------------- */
-  nav {
-    width: 100%;
-    background: #FFF;
-  }
-  nav #navicon {
-    display: none;
-  }
-
-  nav a {
-    display: block;
-    height: 34px;
-    text-align: center;
-    padding-top: 10px;
-  }
-
-  /* NOTE: Content
-  -------------------------------------------------- */
-
-  /* NOTE: Footer
-  -------------------------------------------------- */
-  footer {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* NOTE: Headigns
-  -------------------------------------------------- */
-  p {
-    padding: 20px;
-  }
-  a {
-    text-decoration: none;
-  }
-
-  /* NOTE: Responsive Mode
-  -------------------------------------------------- */
-  @media screen and (max-width: 414px) {
-    nav {
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 50px;
-    }
-    nav #navicon {
-      display: block;
-      height: 38px;
-      width: 38px;
-    }
-    .header {
-      margin-top: 50px;
-      height: 50%;
-    }
-    .content .row {
-      flex-direction: column;
-    }
-  }
-}
-</style>
+    <!-- GOOGLE ANALYTICS -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', '~~~~ GOOGLE ANALYTICS CODE ~~~~', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
+
 <body>
 
-  <div class="wrap">
-    <div class="row header">
-      <header>
-        <h1>Header</h1>
-      </header>
-    </div><!-- NOTE: /header -->
-
-    <div class="nav">
-      <nav>
-        <a href="#" id="navicon"></a><!-- NOTE: Mobile Button -->
-        <ul class="row">
-          <li class="col"><a href="#">item 1</a></li>
-          <li class="col"><a href="#">item 2</a></li>
-          <li class="col"><a href="#">item 3</a></li>
-          <li class="col"><a href="#">item 4</a></li>
-        </ul>
-      </nav>
-    </div><!-- NOTE: /nav -->
-
-    <div class="content">
-      <div class="row">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-        <div class="col">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-        <div class="col">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-    </div><!-- NOTE: /content -->
-
-
-    <div class="row footer">
-      <footer>
-        <p>
-          Footer
-        </p>
-      </footer>
-    </div><!-- NOTE: /footer -->
-
-  </div><!-- NOTE: /wrap -->
-
+    <!-- SCRIPTS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/master.js"></script>
 </body>
+
 </html>
