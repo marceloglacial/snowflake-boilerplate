@@ -1,0 +1,24 @@
+
+
+
+
+/*
+Responsive Mode (320, 768, 1024, 1200)
+=======================================================
+*/
+
+@media (min-width: 1400px) {
+    /* Big Screens */
+}
+
+@media (max-width: 1112px) {
+    /* iPad Pro */
+}
+
+@media (max-width: 768px) {
+    /* Big Phones */
+}
+
+@media (max-width: 320px) {
+    /* Small Phones  */
+}
