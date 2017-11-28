@@ -1,7 +1,5 @@
 # Snowflake Boilerplate
 
-## Info 
-
 * Created by Marcelo Glacial
 * Starts on 09/05/2017
 
