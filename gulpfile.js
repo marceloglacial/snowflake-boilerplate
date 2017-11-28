@@ -15,6 +15,7 @@ gulp.task('serve', function () {
     gulp.watch("src/**/*.*").on('change', browserSync.reload);
 });
 
+// Minify build
 gulp.task('compress', function () {
     gulp.src('src/assets/js/**/*.js')
         .pipe(uglify())
