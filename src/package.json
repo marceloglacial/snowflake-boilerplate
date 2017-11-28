@@ -1,0 +1,14 @@
+{
+  "name": "snowflake-boilerplaite",
+  "version": "0.0.1",
+  "description": "skeleton to web projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcelo Glacial",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
