@@ -21,12 +21,16 @@
   "homepage": "https://gitlab.com/glacial/snowflake-boilerplate#README",
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.9.0",
+    "gulp-minify-html": "^1.0.6",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^3.0.0"
-  },
-  "dependencies": {
+    "gulp-sequence": "^0.4.6",
+    "gulp-smushit": "^1.2.0",
+    "gulp-uglify": "^3.0.0",
     "pump": "^1.0.3"
-  }
+  },
+  "dependencies": {}
 }
