@@ -12,62 +12,39 @@ Starts on: 09/05/2017
 =======================================================
 */
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background: black;
+    color: white; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-overflow: ellipsis;
+}
+
 
 /*
-Responsive Mode
+Responsive Mode (320, 768, 1024, 1200)
 =======================================================
 */
 
-
-/* Iphone X */
-
-header {
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+@media (min-width: 1400px) {
+    /* Big Screens */
 }
 
-@supports(padding: max(0px)) {
-    footer {
-        padding-left: max(8px, env(safe-area-inset-left));
-        padding-right: max(8px, env(safe-area-inset-right));
-        padding-bottom: max(8px, env(safe-area-inset-bottom));
-    }
-    main {
-        padding-left: max(12px, env(safe-area-inset-left));
-        padding-right: max(12px, env(safe-area-inset-right));
-    }
+@media (max-width: 1112px) {
+    /* iPad Pro */
 }
 
-
-/* Large devices (desktops, less than 1200px) */
-
-@media (max-width: 1199px) {
-    /* Code Here */
+@media (max-width: 768px) {
+    /* Big Phones */
 }
-
-
-/* Medium devices (tablets, less than 992px) */
-
-@media (max-width: 991px) {
-    /* Code Here */
-}
-
-
-/* Small devices (landscape phones, less than 768px) */
-
-@media (max-width: 767px) {
-    /* Code Here */
-}
-
-
-/* Extra small devices (portrait phones, less than 576px) */
-
-@media (max-width: 575px) {
-    /* Code Here */
-}
-
-
-/* Extra Extra small devices (iphone 5s/se) */
 
 @media (max-width: 320px) {
-    /* Code Here */
+    /* Small Phones  */
 }
