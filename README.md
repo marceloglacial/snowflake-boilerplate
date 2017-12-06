@@ -12,3 +12,9 @@ Using Gulp to automate build, minify and browser live reloading.
 Using Bootstrap to grid and compponents.
 
 Using jQuery to animations and DOM manipulation.
+
+Using Sketch to design and favicons
+
+## Dist URL
+
+<https://marceloglacial.github.io/snowflake-boilerplate/dist/>
