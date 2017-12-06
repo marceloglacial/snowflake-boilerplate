@@ -18,4 +18,3 @@ Using Sketch to design and favicons
 ## Dist URL
 
 <https://marceloglacial.github.io/snowflake-boilerplate/dist/>
-
