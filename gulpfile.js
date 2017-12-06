@@ -21,10 +21,10 @@ gulp.task('serve', function () {
 // Minimize JS
 gulp.task('build-js', function (cb) {
     pump([
-        gulp.src('src/assets/js/*.js'),
-        uglify(),
-        gulp.dest('dist/assets/js')
-    ],
+            gulp.src('src/assets/js/*'),
+            uglify(),
+            gulp.dest('dist/assets/js/')
+        ],
         cb
     );
 });
@@ -75,7 +75,10 @@ gulp.task('build-clean', function () {
 
 // Minify XHTML
 gulp.task('build-html', function () {
-    var opts = { comments: false, spare: true };
+    var opts = {
+        comments: false,
+        spare: true
+    };
 
     gulp.src('./src/**/*.html')
         .pipe(minifyHTML(opts))
@@ -87,6 +90,7 @@ gulp.task('build', gulpSequence(
     'build-clean',
     'build-copy',
     'build-css',
+    'build-js',
     'build-html',
     'build-img',
     'build-serve'
