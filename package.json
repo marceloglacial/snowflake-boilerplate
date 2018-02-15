@@ -1,32 +1,34 @@
 {
   "name": "snowflake-boilerplate",
-  "version": "0.0.1",
-  "description": "html5/css3/js website starts blueptint",
+  "version": "1.0.0",
+  "description": "Snowflake Boilerplate",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-smushit": "^1.2.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^3.0.0"
+  },
+  "devDependencies": {
+    "@cedx/gulp-php-minify": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-minify-html": "^1.0.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/glacial/snowflake-boilerplate.git"
+    "url": "https://github.com/marceloglacial/snowflake-boilerplate.git"
   },
   "author": "Marcelo Glacial",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/glacial/snowflake-boilerplate/issues"
+    "url": "https://github.com/marceloglacial/snowflake-boilerplate/issues"
   },
-  "homepage": "https://gitlab.com/glacial/snowflake-boilerplate#README",
-  "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^3.0.0"
-  },
-  "dependencies": {
-    "pump": "^1.0.3"
-  }
+  "homepage": "https://github.com/marceloglacial/snowflake-boilerplate/"
 }
