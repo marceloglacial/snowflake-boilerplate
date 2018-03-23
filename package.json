@@ -20,7 +20,8 @@
   },
   "homepage": "https://gitlab.com/glacial/snowflake-boilerplate#README",
   "devDependencies": {
-   "autoprefixer": "*",
+    "gulp-dependencies-changed": "*",
+    "autoprefixer": "*",
     "browser-sync": "*",
     "del": "*",
     "gulp": "*",
