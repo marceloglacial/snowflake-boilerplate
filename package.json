@@ -20,18 +20,24 @@
   },
   "homepage": "https://gitlab.com/glacial/snowflake-boilerplate#README",
   "devDependencies": {
-    "gulp-dependencies-changed": "*",
+    "gulp": "*",
     "autoprefixer": "*",
     "browser-sync": "*",
     "del": "*",
-    "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-clean-css": "*",
+    "gulp-dependencies-changed": "*",
     "gulp-minify-html": "*",
     "gulp-sequence": "*",
     "gulp-smushit": "*",
     "gulp-uglify": "*",
     "pump": "*",
     "uglify": "*"
-   }
+  },
+  "dependencies": {
+    "bootstrap": "*",
+    "jquery": "*",
+    "popper": "*",
+    "uuid": "*"
+  }
 }
