@@ -18,3 +18,14 @@ Using Sketch to design and favicons
 ## Dist URL
 
 <https://marceloglacial.github.io/snowflake-boilerplate/dist/>
+
+
+## How to install
+
+(Node required)
+
+sudo npm update -g
+
+sudo npm init 
+
+sudo npm install --save-dev
