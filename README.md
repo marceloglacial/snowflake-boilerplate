@@ -20,14 +20,15 @@ Using Sketch to design and favicons
 <https://marceloglacial.github.io/snowflake-boilerplate/dist/>
 
 
-## How to install
-
-(Node required)
-
-$ sudo npm install -g npm-check-updates
-
-$ sudo ncu -u
+## How to install (node required)
 
 $ sudo npm init
 
 $ sudo npm install --save-dev
+
+
+### Optional (update npm)
+
+$ sudo npm install -g npm-check-updates
+
+$ sudo ncu -u
