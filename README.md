@@ -24,8 +24,7 @@ Using Sketch to design and favicons
 
 (Node required)
 
-sudo npm update -g
-
-sudo npm init 
-
-sudo npm install --save-dev
+$ sudo npm install -g npm-check-updates
+$ sudo ncu -u
+$ sudo npm init
+$ sudo npm install --save-dev
