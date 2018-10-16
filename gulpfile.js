@@ -1,25 +1,28 @@
-var gulp = require('gulp');
-var del = require('del');
-var browserSync = require('browser-sync').create();
-var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
-var minifyHTML = require('gulp-minify-html');
-var pump = require('pump');
-var smushit = require('gulp-smushit');
-var autoprefixer = require('gulp-autoprefixer');
-var gulpSequence = require('gulp-sequence')
+const gulp = require('gulp');
+const del = require('del');
+const browserSync = require('browser-sync').create();
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const pump = require('pump');
+const smushit = require('gulp-smushit');
+const autoprefixer = require('gulp-autoprefixer');
+const minifyHTML = require('gulp-minify-html');
 
 // Static Server
-gulp.task('serve', function () {
+gulp.task('serve', serve);
+
+function serve() {
     browserSync.init({
         server: "./src"
     });
 
     gulp.watch("src/**/*.*").on('change', browserSync.reload);
-});
+};
 
 // Minimize JS
-gulp.task('build-js', function (cb) {
+gulp.task('build-js', buildJs);
+
+function buildJs(cb) {
     pump([
             gulp.src('src/assets/js/*'),
             uglify(),
@@ -27,16 +30,20 @@ gulp.task('build-js', function (cb) {
         ],
         cb
     );
-});
+};
 
 // Copy files to dist
-gulp.task('build-copy', function () {
+gulp.task('build-copy', buildCopy);
+
+function buildCopy() {
     return gulp.src('src/**/*')
         .pipe(gulp.dest('dist/'));
-});
+};
 
 // Minify CSS and ADD vendor prefix
-gulp.task('build-css', function () {
+gulp.task('build-css', buildCSS);
+
+function buildCSS() {
     return gulp.src('src/assets/css/*.*')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -49,33 +56,48 @@ gulp.task('build-css', function () {
             console.log(`${details.name}: ${details.stats.minifiedSize}`);
         }))
         .pipe(gulp.dest('dist/assets/css'));
-});
+};
 
 // Optimize images
-gulp.task('build-img', function () {
+gulp.task('build-img', buildIMG);
+
+function buildIMG() {
     return gulp.src('src/assets/img/*')
         .pipe(smushit())
         .pipe(gulp.dest('dist/assets/img'))
-});
+};
 
 // Serve dist files
-gulp.task('build-serve', function () {
+gulp.task('build-serve', buildServe);
+
+function buildServe() {
     browserSync.init({
         server: "./dist"
     })
-});
+};
 
 // Clean dist and tmp
-gulp.task('build-clean', function () {
+gulp.task('build-clean', buildClean);
+
+function buildClean() {
     return del([
         'dist/**/*',
         'tmp/**/*'
     ]);
-});
+};
 
 // Minify XHTML
-gulp.task('build-html', function () {
+gulp.task('build-html', buildHtml);
+
+function buildHtml(done) {
     var opts = {
+        comments: false,
+        spare: true
+    };
+    gulp.src('./src/**/*.html')
+        .pipe(minifyHTML(opts))
+        .pipe(gulp.dest('./dist/'));
+        var opts = {
         comments: false,
         spare: true
     };
@@ -83,18 +105,11 @@ gulp.task('build-html', function () {
     gulp.src('./src/**/*.html')
         .pipe(minifyHTML(opts))
         .pipe(gulp.dest('./dist/'))
-});
+    done();
+};
 
 // Build
-gulp.task('build', gulpSequence(
-    'build-clean',
-    'build-copy',
-    'build-css',
-    'build-js',
-    'build-html',
-    'build-img',
-    'build-serve'
-));
+gulp.task('build', gulp.series('build-clean', 'build-copy', 'build-css','build-js','build-html','build-img','build-serve'));
 
 // Run Default
-gulp.task('default', ['serve']);
+gulp.task('default', serve);
