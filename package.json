@@ -21,9 +21,6 @@
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://gitlab.com/glacial/snowflake-boilerplate.git"
