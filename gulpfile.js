@@ -6,7 +6,7 @@ const uglify = require('gulp-uglify');
 const pump = require('pump');
 const smushit = require('gulp-smushit');
 const autoprefixer = require('gulp-autoprefixer');
-const minifyHTML = require('gulp-minify-html');
+const htmlmin = require('gulp-htmlmin');
 
 // Static Server
 gulp.task('serve', serve);
@@ -87,26 +87,11 @@ function buildClean() {
 };
 
 // Minify XHTML
-gulp.task('build-html', buildHtml);
-
-function buildHtml(done) {
-    var opts = {
-        comments: false,
-        spare: true
-    };
-    gulp.src('./src/**/*.html')
-        .pipe(minifyHTML(opts))
-        .pipe(gulp.dest('./dist/'));
-        var opts = {
-        comments: false,
-        spare: true
-    };
-
-    gulp.src('./src/**/*.html')
-        .pipe(minifyHTML(opts))
-        .pipe(gulp.dest('./dist/'))
-    done();
-};
+gulp.task('build-html', () => {
+    return gulp.src('src/*.html')
+      .pipe(htmlmin({ removeComments: true, collapseWhitespace: true }))
+      .pipe(gulp.dest('dist'));
+  });
 
 // Build
 gulp.task('build', gulp.series('build-clean', 'build-copy', 'build-css','build-js','build-html','build-img','build-serve'));
