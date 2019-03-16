@@ -1,6 +1,6 @@
 # Snowflake Boilerplate (discontinued) 
 
-See SnowFall Boilerplate: https://github.com/marceloglacial/snowfall-boilerplate
+Please, see SnowFall Boilerplate: https://github.com/marceloglacial/snowfall-boilerplate
 
 ## Description
 
