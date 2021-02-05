@@ -1,32 +1,26 @@
 {
   "name": "snowflake-boilerplate",
-  "version": "0.0.1",
-  "description": "html5/css3/js website starts blueptint",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "repository": "https://github.com/marceloglacial/snowflake-boilerplate.git",
+  "author": "Marcelo Glacial <glacial@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx mix watch",
+    "build": "npx mix --production"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/glacial/snowflake-boilerplate.git"
-  },
-  "author": "Marcelo Glacial",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/glacial/snowflake-boilerplate/issues"
-  },
-  "homepage": "https://gitlab.com/glacial/snowflake-boilerplate#README",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^3.0.0"
-  },
-  "dependencies": {
-    "pump": "^1.0.3"
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "handlebars": "^4.7.6",
+    "handlebars-layouts": "^3.1.4",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "include-media": "^1.4.9",
+    "laravel-mix": "^6.0.11",
+    "laravel-mix-handlebars": "^1.0.3",
+    "postcss": "^8.1",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.32.6",
+    "sass-loader": "8.*"
   }
 }
