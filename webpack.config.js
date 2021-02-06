@@ -8,10 +8,12 @@ const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
+// WIP: FIX STYLES ON DEV
+
 module.exports = (env, argv) => {
   const isDevelopment = argv.mode !== 'production';
   return {
-    devtool: 'source-map',
+    devtool: isDevelopment ? 'source-map' : 'eval',
     entry: './src/app.js',
     output: {
       filename: 'js/app.js',
@@ -31,13 +33,13 @@ module.exports = (env, argv) => {
             {
               loader: 'css-loader',
               options: {
-                sourceMap: true,
+                sourceMap: isDevelopment,
               },
             },
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: true,
+                sourceMap: isDevelopment,
               },
             },
           ],
