@@ -1,26 +1,32 @@
 {
   "name": "snowflake-boilerplate",
-  "version": "1.0.0",
-  "main": "src/app.js",
+  "version": "2.0.0",
+  "main": "app.js",
   "repository": "https://github.com/marceloglacial/snowflake-boilerplate.git",
   "author": "Marcelo Glacial <glacial@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "npx mix watch",
-    "build": "npx mix --production"
+    "start": "webpack serve --mode=development",
+    "dev": "webpack --mode=development",
+    "watch": "webpack --mode=development --watch",
+    "build": "webpack --mode=production"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "browser-sync-webpack-plugin": "^2.3.0",
-    "handlebars": "^4.7.6",
-    "handlebars-layouts": "^3.1.4",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.1",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "handlebars-webpack-plugin": "^2.2.1",
+    "imagemin-mozjpeg": "^9.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "include-media": "^1.4.9",
-    "laravel-mix": "^6.0.11",
-    "laravel-mix-handlebars": "^1.0.3",
-    "postcss": "^8.1",
-    "resolve-url-loader": "^3.1.2",
+    "mini-css-extract-plugin": "^1.3.5",
     "sass": "^1.32.6",
-    "sass-loader": "8.*"
+    "sass-loader": "^11.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.21.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
