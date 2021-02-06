@@ -1,6 +1,6 @@
 {
   "name": "snowflake-boilerplate",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "main": "app.js",
   "repository": "https://github.com/marceloglacial/snowflake-boilerplate.git",
   "author": "Marcelo Glacial <glacial@gmail.com>",
