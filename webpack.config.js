@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
   const isDevelopment = argv.mode !== 'production';
   return {
     devtool: isDevelopment ? 'source-map' : 'eval',
-    entry: './src/app.js',
+    entry: ['./src/app.js', './src/styles/styles.scss'],
     output: {
       filename: 'js/app.js',
       path: path.resolve(__dirname, 'dist'),
@@ -27,22 +27,8 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
-          test: /\.s[ac]ss$/i,
-          use: [
-            isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: isDevelopment,
-              },
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: isDevelopment,
-              },
-            },
-          ],
+          test: /\.(sa|sc|c)ss$/,
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
         },
       ],
     },
@@ -66,6 +52,10 @@ module.exports = (env, argv) => {
             progressive: true,
           }),
         ],
+      }),
+      new MiniCssExtractPlugin({
+        filename: 'css/styles.css',
+        chunkFilename: 'css/[id].css',
       }),
       new HandlebarsPlugin({
         entry: path.join(process.cwd(), 'src/templates', '*.hbs'),
