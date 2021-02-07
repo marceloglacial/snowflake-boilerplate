@@ -8,8 +8,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
-// WIP: FIX STYLES ON DEV
-
 module.exports = (env, argv) => {
   const isDevelopment = argv.mode !== 'production';
   return {
