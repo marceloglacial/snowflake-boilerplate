@@ -1,9 +1,15 @@
-// Imports
+// Core
 // ------------------------------------------------
-@import './media-queries';
-@import './variables';
-@import './util';
-@import './reset';
-@import './typography';
-@import './grid';
-@import './base';
+
+@import './core/media-queries';
+@import './core/variables';
+@import './core/util';
+@import './core/reset';
+@import './core/typography';
+@import './core/grid';
+@import './core/base';
+
+// Components
+// ------------------------------------------------
+
+@import './components/site-branding';
