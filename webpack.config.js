@@ -21,12 +21,21 @@ module.exports = (env, argv) => {
       contentBase: path.join(__dirname, 'dist'),
       compress: true,
       port: 9000,
+      host: '0.0.0.0',
     },
     module: {
       rules: [
         {
           test: /\.(sa|sc|c)ss$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader?url=false',
+            'sass-loader',
+          ],
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
         },
       ],
     },
